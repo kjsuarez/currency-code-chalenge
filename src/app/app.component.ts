@@ -13,6 +13,7 @@ import { BudgeterService } from './budgeter.service'
 export class AppComponent {
   startDate;
   numberOfDays;
+  bananaBudgit;
 
   constructor(private budgeterService: BudgeterService) {
     budgeterService.startDate$.subscribe(
@@ -29,10 +30,27 @@ export class AppComponent {
   title = 'bananaBudgeter';
 
   getBudget() {
-    var budgetHash = {startDate: this.startDate, numberOfDays: 100}
+    var budgetHash = {startDate: this.startDate, numberOfDays: this.numberOfDays}
     this.budgeterService.getBudget(budgetHash)
     .subscribe((response: any) => {
       console.log(response)
+      this.bananaBudgit = response.object
     });
+  }
+
+  validInputs() {
+    if(this.startDate && this.numberOfDays) {
+      return true
+    } else {
+     return false
+    }
+  }
+
+  plural() {
+    return (this.numberOfDays == 1) ? "day" : "days"
+  }
+
+  budgeted() {
+    return (this.bananaBudgit >= 0)
   }
 }

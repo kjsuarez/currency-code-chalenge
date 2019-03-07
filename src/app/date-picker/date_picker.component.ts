@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {MatDatepickerInputEvent} from '@angular/material/datepicker';
-import { BudgeterService } from '../budgeter.service'
+import { BudgeterService } from '../budgeter.service';
 
 @Component({
   selector: 'date-picker',

@@ -24,6 +24,10 @@ export class BudgeterService {
     this.startDateSource.next(dateString);
   }
 
+  setDuration(duration) {
+    this.durationSource.next(duration);
+  }
+
   getBudget(budgetInfo) {
     return this.httpClient.post("http://localhost:3000/budget", budgetInfo)
     .pipe(

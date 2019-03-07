@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BudgeterService } from '../budgeter.service';
 
 @Component({
   selector: 'budget-length-selector',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class BudgetLengthSelectorComponent {
   title = 'bananaBudgeter';
+  duration;
+
+  constructor(private budgeterService: BudgeterService){}
+
+  setDuration() {
+      this.budgeterService.setDuration(this.duration)
+  }
 }

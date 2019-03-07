@@ -12,7 +12,7 @@ router.post('/budget', function (req, res, next) {
   const req_json = req.body
   var budget = budgeter.getBudget(req_json)
   res.status(201).json({
-    message: 'florp',
+    message: 'success',
     object: budget
   })
 });
