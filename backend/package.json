@@ -1,0 +1,15 @@
+{
+  "name": "bananabudgeter",
+  "version": "1.0.0",
+  "description": "silly code test",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
+  }
+}
