@@ -18,7 +18,7 @@ function getBudget(budgetInfo) {
   }
   budget = budget * 0.01
   console.log(budget)
-  return budget
+  return (budget).toFixed(2)
 }
 
 function isWeekDay(date) {
