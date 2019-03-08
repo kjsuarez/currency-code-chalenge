@@ -2,7 +2,7 @@
   <input
   matInput
   [matDatepicker]="picker"
-  placeholder="Input & change events"
+  placeholder="Start Date"
   (dateInput)="addEvent('input', $event)"
   (dateChange)="addEvent('change', $event)"
   [(ngModel)]="dateInput">
